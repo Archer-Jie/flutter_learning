@@ -42,6 +42,9 @@ flutter:
   uses-material-design: true
   assets:
     - images/lake.jpg
+    - images/2.0x/lake.jpg
+    - images/3.0x/lake.jpg
+    - images/4.0x/lake.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
