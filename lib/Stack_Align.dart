@@ -29,41 +29,36 @@ class LayoutDemo extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            Positioned(
-                left: 250,
-                top: 100,
+            Align(
+                alignment: Alignment.topLeft,
                 child: Icon(
                   Icons.home,
                   size: 40,
                   color: Colors.white,
                 )),
-            Positioned(
-                left: 200,
-                top: 80,
+            Align(
+                alignment: Alignment.bottomLeft,
                 child: Icon(
                   Icons.gamepad,
                   size: 30,
                   color: Colors.indigo,
                 )),
-            Positioned(
-                left: 100,
-                top: 160,
+            Align(
+                alignment: Alignment.topRight,
                 child: Icon(
                   Icons.ondemand_video,
                   size: 70,
                   color: Colors.lightGreenAccent,
                 )),
-            Positioned(
-                left: 80,
-                top: 200,
+            Align(
+                alignment: Alignment.bottomRight,
                 child: Icon(
                   Icons.nature_people,
                   size: 50,
                   color: Colors.lime,
                 )),
-          Positioned(
-            left: 20,
-            top: 180,
+            Align(
+                alignment: Alignment.center,
                 child: Icon(
                   Icons.featured_video,
                   size: 60,
