@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
 
 class LayoutDemo extends StatelessWidget {
 
-  Widget _getListData(context,index){
+  List<Widget> _getListData(){
+    var tempList = listData.map((value){
       return Container(
         decoration: BoxDecoration(
           border: Border.all(
@@ -28,10 +29,10 @@ class LayoutDemo extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Image.network(listData[index]["imageUrl"]),
+            Image.network(value["imageUrl"]),
             SizedBox(height: 15),
             Text(
-              listData[index]["title"],
+              value["title"],
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20
@@ -40,26 +41,20 @@ class LayoutDemo extends StatelessWidget {
           ],
         )
       );
+    });
 
+    return tempList.toList();
   }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return GridView.builder(
-      padding: EdgeInsets.all(10),
-//      padding: EdgeInsets.all(20),
-//      crossAxisSpacing: 20.0,   //水平子widget之间的距离
-//      mainAxisSpacing: 10.0,  //垂直子widger之间的距离
-//      crossAxisCount: 2,      //一行widget的数量
-////      childAspectRatio: 1, //宽度与宽度之比
-//      children: this._getListData()
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisSpacing: 10.0, //水平子widget之间的距离
-        mainAxisSpacing: 10.0, //垂直子widger之间的距离
-        crossAxisCount: 2, //一行widget的数量
-      ),
-      itemCount: listData.length,
-      itemBuilder: this._getListData,
+    return GridView.count(
+      padding: EdgeInsets.all(20),
+      crossAxisSpacing: 20.0,   //水平子widget之间的距离
+      mainAxisSpacing: 10.0,  //垂直子widger之间的距离
+      crossAxisCount: 2,      //一行widget的数量
+//      childAspectRatio: 1, //宽度与宽度之比
+      children: this._getListData()
     );
   }
 
