@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,27 +17,20 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeContent extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    //从数组提取数据到列表就是动态列表
-    return ListView(
-      children: this._getData()
+    return GridView.count(
+      crossAxisCount: 2,
+      children: <Widget>[
+          Text("这是一个文本"),
+          Text("这是一个文本"),
+          Text("这是一个文本"),
+          Text("这是一个文本"),
+          Text("这是一个文本"),
+      ],
     );
-  }
-
-
-  //自定义方法
-  List<Widget> _getData() {
-    var tempList = listData.map((value){
-      return ListTile(
-        leading: Image.network(value["imageUrl"]),
-        title: Text(value["title"]),
-        subtitle: Text(value["author"]),
-      );
-    });
-    print(tempList);
-    return tempList.toList();
   }
 
 }

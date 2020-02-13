@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,36 +29,41 @@ class LayoutDemo extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            Align(
-                alignment: Alignment.topLeft,
+            Positioned(
+                left: 250,
+                top: 100,
                 child: Icon(
                   Icons.home,
                   size: 40,
                   color: Colors.white,
                 )),
-            Align(
-                alignment: Alignment.bottomLeft,
+            Positioned(
+                left: 200,
+                top: 80,
                 child: Icon(
                   Icons.gamepad,
                   size: 30,
                   color: Colors.indigo,
                 )),
-            Align(
-                alignment: Alignment.topRight,
+            Positioned(
+                left: 100,
+                top: 160,
                 child: Icon(
                   Icons.ondemand_video,
                   size: 70,
                   color: Colors.lightGreenAccent,
                 )),
-            Align(
-                alignment: Alignment.bottomRight,
+            Positioned(
+                left: 80,
+                top: 200,
                 child: Icon(
                   Icons.nature_people,
                   size: 50,
                   color: Colors.lime,
                 )),
-            Align(
-                alignment: Alignment.center,
+          Positioned(
+            left: 20,
+            top: 180,
                 child: Icon(
                   Icons.featured_video,
                   size: 60,

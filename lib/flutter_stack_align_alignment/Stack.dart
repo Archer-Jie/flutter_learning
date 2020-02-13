@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,14 +24,14 @@ class LayoutDemo extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Stack( //堆
-        alignment: Alignment(-0.3,-0.5),
+        alignment: Alignment.topCenter,
         children: <Widget>[
           Container(
             height: 400,
             width: 300,
             color: Colors.red,
           ),
-          Text('我是一个文本',style: TextStyle(color: Colors.white,fontSize: 30),),
+          Text('我是一个文本',style: TextStyle(color: Colors.white,fontSize: 20),),
         ],
       ),
     );

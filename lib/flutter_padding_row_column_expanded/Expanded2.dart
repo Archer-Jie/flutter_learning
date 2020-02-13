@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,15 +24,8 @@ class LayoutDemo extends StatelessWidget {
     // TODO: implement build
     return Row(
       children: <Widget>[
-        Expanded(
-          flex: 1,
-          child:IconContainer(Icons.save_alt, color: Colors.yellow,),
-        ),
-        Expanded(
-          flex: 2,
-          child:IconContainer(Icons.scanner, color: Colors.orange,),
-        ),
-        Expanded(
+        IconContainer(Icons.save_alt, color: Colors.yellow,),
+        Expanded(//自适应
           flex: 1,
           child:IconContainer(Icons.battery_alert, color: Colors.indigoAccent,),
         ),

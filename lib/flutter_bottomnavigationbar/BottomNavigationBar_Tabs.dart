@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +19,6 @@ class Tabs extends StatefulWidget {
 }
 
 class _TabsState extends State<Tabs> {
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +27,9 @@ class _TabsState extends State<Tabs> {
       ),
       body: Text('你好flutter'),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: this._currentIndex,
+        currentIndex: 1,
         onTap: (int index){
-          setState(() {
-            this._currentIndex = index;
-          });
+          print(index);
         },
         items: [
           BottomNavigationBarItem(

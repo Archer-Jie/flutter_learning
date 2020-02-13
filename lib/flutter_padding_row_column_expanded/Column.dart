@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'res/listData.dart';
+import '../res/listData.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,9 +26,9 @@ class LayoutDemo extends StatelessWidget {
       width: 400.0,
       height: 600.0,
       color: Colors.blue,
-      child: Row(//水平排列
+      child: Column(//垂直布局
         mainAxisAlignment: MainAxisAlignment.spaceEvenly, //主轴的排序方式
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           IconContainer(Icons.save_alt,color: Colors.yellow,),
           IconContainer(Icons.scanner,color: Colors.orange,),
