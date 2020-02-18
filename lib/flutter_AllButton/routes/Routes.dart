@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../pages/Form.dart';
 import '../pages/Search.dart';
-import '../Tabs.dart';
+import '../Tabs_with_floatingaction_button.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
 import '../pages/user/Login.dart';

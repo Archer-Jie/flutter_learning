@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../Tabs.dart';
+import '../../Tabs_with_floatingaction_button.dart';
 
 class RegisterThirdPage extends StatefulWidget {
   @override

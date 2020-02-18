@@ -20,6 +20,14 @@ class _ButtonDemoPageState extends State<ButtonDemoPage> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add,color: Colors.black,),
+        onPressed: (){
+          print("FloatingAcitonButton");
+        },
+        backgroundColor: Colors.yellow,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
