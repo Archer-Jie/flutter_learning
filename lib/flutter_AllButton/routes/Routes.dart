@@ -11,6 +11,7 @@ import '../pages/user/RegisterThird.dart';
 import '../pages/AppBartDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/user/User.dart';
+import '../pages/Button.dart';
 
 final routes = {
   '/tabs' : (context) => Tabs(),
@@ -25,6 +26,7 @@ final routes = {
   '/appBarDemo': (context) => AppBarDemoPage(),
   '/tabbarcontroller': (context) => TabBarControllerPage(),
   '/user': (context) => UserPage(),
+  '/button': (context) => ButtonDemoPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

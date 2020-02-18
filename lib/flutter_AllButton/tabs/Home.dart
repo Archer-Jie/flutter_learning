@@ -48,6 +48,14 @@ class _HomePageState extends State<HomePage> {
               Navigator.pushNamed(context, '/tabbarcontroller');
             },
           ),
+          RaisedButton(
+            child: Text('跳转到Button演示界面'),
+            color: Theme.of(context).accentColor,
+            textTheme: ButtonTextTheme.primary,
+            onPressed: (){
+              Navigator.pushNamed(context, '/button');
+            },
+          ),
         ],
       ),
     );
